@@ -1,0 +1,327 @@
+//// FACE - ROUND
+/**/
+fill(skintone);
+ellipse(0, 0, 400, 500 + s * 3);
+
+fill(200, 0, 0, 100); // NOSE
+triangle(0,-40, -30, 40, 30, 40);
+
+fill(haircolor); // EYEBROWS
+ellipse(-80, -80 - s * 2, 110, 110);
+ellipse(80, -80 - s * 2, 110, 110);
+fill(skintone);
+ellipse(-80, -70 - s * 2, 130, 110);
+ellipse(80, -70 - s * 2, 130, 110);
+/**/
+//// FACE - NARROW
+/**/
+fill(skintone);
+ellipse(0, 0, 300, 500 + s * 3);
+
+fill(200, 0, 0, 100); // NOSE
+triangle(0,-40, -30, 40, 30, 40);
+
+fill(haircolor); // EYEBROWS
+ellipse(-80, -80 - s * 2, 110, 110);
+ellipse(80, -80 - s * 2, 110, 110);
+fill(skintone);
+ellipse(-80, -70 - s * 2, 130, 110);
+ellipse(80, -70 - s * 2, 130, 110);
+/**/
+//// FACE - SQUARE
+/**/
+fill(skintone);
+rect(0, 0, 400, 420 + s * 3, 20);
+
+fill(200, 0, 0, 100); // NOSE
+triangle(0,-40, -30, 40, 30, 40);
+  
+fill(haircolor); // EYEBROWS
+ellipse(-80, -80 - s * 2, 110, 110);
+ellipse(80, -80 - s * 2, 110, 110);
+fill(skintone);
+ellipse(-80, -70 - s * 2, 130, 110);
+ellipse(80, -70 - s * 2, 130, 110);
+/**/
+//// MOUTH - HAPPY
+/**/
+fill(0);
+arc(0, 80, 200, 150 + s * 10, 0, PI, CHORD);
+/**/
+//// MOUTH - SAD
+/**/
+fill(0);
+arc(0, 120, 200 + s * 10, 150 , PI, 0, CHORD);
+/**/
+//// EYES - BIG
+/**/
+fill(255);
+ellipse (-80, -40, 100, 100);
+ellipse ( 80, -40, 100, 100);
+fill(eyecolor);
+ellipse (-80, -40, 80, 80);
+ellipse (80, -40, 80, 80);
+fill(0);
+ellipse (-80, -40, 60, 60);
+ellipse (80, -40, 60, 60);
+
+fill(255); // EYE SHINE
+ellipse(-60, -60, 25, 25);
+ellipse(100, -60, 25, 25);
+/**/
+//// EYES - SMALL
+/**/
+fill(255);
+ellipse (-80, -40, 80, 80);
+ellipse (80, -40, 80, 80);
+fill(eyecolor);
+ellipse (-80, -40, 40, 40);
+ellipse (80, -40, 40, 40);
+fill(0);
+ellipse (-80, -40, 20, 20);
+ellipse (80, -40, 20, 20);
+
+fill(255); // EYE SHINE
+ellipse(-60, -60, 25, 25);
+ellipse(100, -60, 25, 25);
+/**/
+//// SKIN - LIGHT
+/**/
+var skintone = ('#f2cdbd');
+/**/
+//// SKIN - MEDIUM
+/**/
+var skintone = ('#d69f87');
+/**/
+//// SKIN - DARK
+/**/
+var skintone = ('#6e4736');
+/**/
+//// EYES - BLUE
+/**/
+var eyecolor = ('#4352ab');
+/**/
+//// EYES - GREEN
+/**/
+var eyecolor = ('#2f7a28');
+/**/
+//// EYES - BROWN
+/**/
+var eyecolor = ('#382318');
+/**/
+//// HAIRCOLOR - BLUE
+/**/
+var haircolor = ('#4352ab');
+/**/
+//// HAIRCOLOR - PINK
+/**/
+var haircolor = ('#eb75d9');
+/**/
+//// HAIRCOLOR - BROWN
+/**/
+var haircolor = ('#382318');
+/**/
+//// HAIRCOLOR - BLACK
+/**/
+var haircolor = ('#1a1919');
+/**/
+//// HAIRCOLOR - BLONDE
+/**/
+var haircolor = ('#f2e5bf');
+/**/
+//// ACCESSORY - NECKTIE
+/**/
+fill(200, 200, 100);
+rect(0, 290, 50, 50, 10);
+triangle(0, 290, 30, 400, -30, 400);
+/**/
+//// ACCESSORY - NECKLACE
+/**/
+noFill();
+stroke(255);
+strokeWeight(10);
+
+arc(0, 240, 250, 200, 0,  PI, OPEN);
+noStroke();
+fill(143, 227, 224);
+ellipse(0, 350, 50, 80);
+/**/
+//// ACCESSORY - CLOWN NOSE
+/**/
+fill(200, 0, 50);
+ellipse(0, 10, 100, 100);
+/**/
+//// ACCESSORY - GLASSES
+/**/
+strokeWeight(10);
+stroke(0);
+noFill();
+ellipse (-80, -40, 130, 130);
+line(-10, -50, 10, -50);
+ellipse (80, -40, 130, 130);
+noStroke();
+/**/
+//// HAT - CAP
+/**/
+fill(130, 191, 224);
+arc(0, -170, 450, 320, PI, 0, CHORD);
+fill(54, 131, 173);
+arc(0, -170, 450, 120, PI, 0, CHORD);
+/**/
+//// HAT - CROWN
+/**/
+fill(194, 192, 89);
+rect(0, -170, 430, 50);
+triangle(-150, -320, -215, -170, -75, -170); // LEFTMOST
+triangle(-75, -320, -140, -170, 0, -170);
+triangle(0, -320, -75, -170, 75, -170); // MIDDLE
+triangle(75, -320, 0, -170, 150, -170);
+triangle(150, -320, 215, -170, 75, -170); // RIGHT MOST
+/**/
+//// HAT - BEANIE
+/**/
+fill(227, 109, 186);
+arc(0, -170, 450, 400, PI, 0, CHORD);
+fill(181, 53, 136);
+ellipse(0, -370, 50, 30);
+/**/
+//// CHARACTER - SCIENTIST
+/**/
+// Scientist
+drawKeypointsExcluded(pose, ['leftEye', 'rightEye', 'leftWrist', 'rightWrist']);
+// GOGGLES
+fill(255);
+stroke(0);
+strokeWeight(7);
+line(pose.leftEye.x, pose.leftEye.y, pose.rightEye.x, pose.rightEye.y);
+ellipse(pose.rightEye.x - 8, pose.rightEye.y, 40);
+ellipse(pose.leftEye.x + 8, pose.leftEye.y, 40);
+
+noStroke();
+fill(100, 100, 100); // TIE
+let mid = (pose.rightShoulder.x+pose.leftShoulder.x)/2;    
+
+beginShape();    
+vertex(mid+30, pose.rightShoulder.y + 80);
+vertex(mid, pose.rightShoulder.y + 10);
+vertex(mid-30, pose.leftShoulder.y + 80);
+vertex(mid, pose.rightShoulder.y + 120);    
+endShape();
+
+fill(120, 120, 120);
+rect(mid - 15, pose.rightShoulder.y, 30, 30, 10);
+
+// TEST TUBE
+fill(255);
+let offsetX = pose.rightWrist.x - 10;
+let offsetY = pose.rightWrist.y + 30;
+
+rect(offsetX, offsetY - 160, 40, 160);
+rect(offsetX - 10, offsetY - 180, 60, 20);
+
+fill(50, 100, 150);
+rect(offsetX, offsetY - 80, 40, 80);
+ellipse(offsetX + 20, offsetY, 40, 40);
+/**/
+//// CHARACTER - ABSTRACT
+/**/
+// ABSTRACT
+
+drawKeypointsExcluded(pose, ['leftEye', 'rightEye', 'leftShoulder', 'rightShoulder', 'leftElbow', 'rightElbow', 'leftWrist', 'rightWrist']);
+
+//EYES
+noFill();
+stroke(255, 255, 0);
+strokeWeight(5);
+ellipse(pose.rightEye.x, pose.rightEye.y, 40);
+ellipse(pose.leftEye.x, pose.leftEye.y, 30);
+
+// FACE
+let faceWidth = pose.leftEar.x - pose.rightEar.x;
+ellipse(pose.nose.x, pose.nose.y - 50, faceWidth + 50);
+
+// ARMS
+noStroke();
+fill(45, 188, 216);
+
+ellipse(pose.rightShoulder.x, pose.rightShoulder.y, 80);
+
+beginShape();
+vertex(pose.rightShoulder.x, pose.rightShoulder.y);
+vertex(10+ (pose.rightShoulder.x+pose.rightElbow.x)/2, 10+ (pose.rightShoulder.y+pose.rightElbow.y)/2);
+vertex(pose.rightElbow.x, pose.rightElbow.y);
+vertex(-10 + (pose.rightShoulder.x+pose.rightElbow.x)/2, -10 + (pose.rightShoulder.y+pose.rightElbow.y)/2);
+endShape();
+
+beginShape();
+vertex(pose.rightElbow.x, pose.rightElbow.y);
+vertex(2+ (pose.rightElbow.x+pose.rightWrist.x)/2, 20+ (pose.rightElbow.y+pose.rightWrist.y)/2);
+vertex(pose.rightWrist.x, pose.rightWrist.y);
+vertex(-20 + (pose.rightElbow.x+pose.rightWrist.x)/2, -20 + (pose.rightElbow.y+pose.rightWrist.y)/2);
+endShape();
+
+// RIGHT GLOVE
+rect(pose.rightWrist.x - 40, pose.rightWrist.y - 120, 80, 140, 20);
+ellipse(pose.rightWrist.x + 40, pose.rightWrist.y - 20, 70, 40);
+
+noStroke(); // LEFT ARM
+fill(128, 19, 78);
+
+ellipse(pose.leftShoulder.x, pose.leftShoulder.y, 80);
+
+beginShape();
+vertex(pose.leftShoulder.x, pose.leftShoulder.y);
+vertex(10+ (pose.leftShoulder.x+pose.leftElbow.x)/2, 10+ (pose.leftShoulder.y+pose.leftElbow.y)/2);
+vertex(pose.leftElbow.x, pose.leftElbow.y);
+vertex(-10 + (pose.leftShoulder.x+pose.leftElbow.x)/2, -10 + (pose.leftShoulder.y+pose.leftElbow.y)/2);
+endShape();
+
+beginShape();
+vertex(pose.leftElbow.x, pose.leftElbow.y);
+vertex(2+ (pose.leftElbow.x+pose.leftWrist.x)/2, 20+ (pose.leftElbow.y+pose.leftWrist.y)/2);
+vertex(pose.leftWrist.x, pose.leftWrist.y);
+vertex(-20 + (pose.leftElbow.x+pose.leftWrist.x)/2, -20 + (pose.leftElbow.y+pose.leftWrist.y)/2);
+endShape();
+
+// LEFT GLOVE
+rect(pose.leftWrist.x - 40, pose.leftWrist.y - 120, 80, 140, 20);
+ellipse(pose.leftWrist.x - 40, pose.leftWrist.y - 20, 70, 40);
+/**/
+//// CHARACTER - ARTIST
+/**/
+// ARTIST
+
+drawKeypointsExcluded(pose, ['leftEye', 'rightEye', 'nose', 'leftWrist', 'rightWrist']);
+// BERET
+fill(0);
+ellipse(pose.nose.x, pose.nose.y - 90, 170, 60);
+rect(pose.nose.x + 5, pose.nose.y - 130, 10, 30);
+
+// MUSTACHE
+triangle(pose.nose.x, pose.nose.y + 20, pose.nose.x - 30, pose.nose.y + 30, pose.nose.x, pose.nose.y + 10); // RIGHT
+triangle(pose.nose.x, pose.nose.y + 20, pose.nose.x + 30, pose.nose.y + 30, pose.nose.x, pose.nose.y + 10); // LEFT
+
+
+let offsetX = pose.rightWrist.x - 10;
+let offsetY = pose.rightWrist.y + 30;
+
+// PENCIL
+fill(255, 255, 100);
+rect(offsetX, offsetY-80, 20, 160);
+
+// WOOD
+fill(255, 205, 100);
+ellipse(offsetX+10, offsetY - 80, 20, 15);
+
+// LEAD
+fill(0);
+beginShape();
+vertex(offsetX, offsetY - 80);
+vertex(offsetX+10, offsetY - 100);
+vertex(offsetX+20, offsetY - 80);
+endShape();
+/**/
+//// CHARACTER - NONE
+/**/
+drawKeypoints();
+/**/

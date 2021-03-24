@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js editor</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <!--<script src="sketch.js"></script>-->
+</head>
+
+<body onload="setHTML('FACE');">
+  <div id="nav">
+    <a href="index.html">EXERCISE 1: FACE</a>
+    <a href="body.html">EXERCISE 2: BODY</a>
+    <a href="#">EXERCISE 3</a>
+
+    <h1>EXERCISE 1: FACE</h1>
+  </div>
+  <div class="dropdown-container">
+    <label>Skintone: </label>
+    <select name="skintone" id="skintone" onchange="setCode('skintone');">
+      <option value="light">Light</option>
+      <option value="medium">Medium</option>
+      <option value="dark">Dark</option>
+    </select>
+    <label>Face Shape: </label>
+    <select name="face" id="face" onchange="setCode('face');">
+      <option value="round">Round</option>
+      <option value="narrow">Narrow</option>
+      <option value="square">Square</option>
+    </select>
+    <label>Eyes: </label>
+    <select name="eyes" id="eyes" onchange="setCode('eyes');">
+      <option value="big">Big</option>
+      <option value="small">Small</option>
+    </select>
+    <label>Mouth: </label>
+    <select name="mouth" id="mouth" onchange="setCode('mouth');">
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+    </select>
+    <label>Hats: </label>
+    <select name="hat" id="hat" onchange="setCode('hat');">
+      <option value="cap">Cap</option>
+      <option value="crown">Crown</option>
+      <option value="beanie">Beanie</option>
+    </select>
+    <label>Eye Color: </label>
+    <select name="eyecolor" id="eyecolor" onchange="setCode('eyecolor');">
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="brown">Brown</option>
+    </select>
+    <label>Eyebrow Color: </label>
+    <select name="haircolor" id="haircolor" onchange="setCode('haircolor');">
+      <option value="blue">Blue</option>
+      <option value="green">Pink</option>
+      <option value="brown">Brown</option>
+      <option value="brown">Black</option>
+      <option value="brown">Blonde</option>
+    </select>
+    <label>Accessory: </label>
+    <select name="accessory" id="accessory" onchange="setCode('accessory');">
+      <option value="necktie">Necktie</option>
+      <option value="necklace">Necklace</option>
+      <option value="clownnose">Clown Nose</option>
+      <option value="glasses">Glasses</option>
+    </select>
+  </div>
+  
+  <div>
+    <textarea id="js" placeholder="JavaScript" spellcheck="false"></textarea>
+    <button type="button" onclick="compile()" id="playButton">Run</button>
+    <iframe id="code"  sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-forms allow-modals allow-downloads" allow="camera; microphone"> </iframe>
+    <section>      
+      <details class="accordion">
+        <summary>Tutorial</summary>
+        <iframe src="tutorials.html"></iframe>
+      </details>
+    </section>
+  </div>
+  
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      getAudioContext().resume();
+    });
+
+    document.getElementsByTagName("summary")[0].addEventListener('click', function() {
+      if(document.getElementsByTagName("section")[0].style.width != "40%")
+        document.getElementsByTagName("section")[0].style.width = "40%";
+      else
+        document.getElementsByTagName("section")[0].style.width = "50px";
+    });
+
+  </script>
+</body>
+
+</html>
