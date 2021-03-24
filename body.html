@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js editor</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <!--<script src="sketch.js"></script>-->
+</head>
+
+<body onload="setHTML('BODY');">
+    <div id="nav">
+        <a href="index.html">EXERCISE 1: FACE</a>
+        <a href="body.html">EXERCISE 2: BODY</a>
+        <a href="#">EXERCISE 3</a>
+
+        <h1>EXERCISE 2: BODY</h1>
+    </div>
+
+    <div class="dropdown-container">     
+        <label>Character: </label>
+        <select name="character" id="character" onchange="setCode('character');">
+        <option value="scientist">Scientist</option>
+        <option value="abstract">Abstract</option>
+        <option value="artist">Artist</option>
+        <option value="none">None</option>
+        </select> 
+    </div>
+    
+    <div>
+        <textarea id="js" placeholder="JavaScript" spellcheck="false"></textarea>
+        <button type="button" onclick="compile()" id="playButton">Run</button>
+        <iframe id="code"  sandbox="allow-scripts allow-pointer-lock allow-same-origin allow-popups allow-forms allow-modals allow-downloads" allow="camera; microphone"> </iframe>
+        <section>      
+        <details class="accordion">
+            <summary>Tutorial</summary>
+            <iframe src="tutorials.html"></iframe>
+        </details>
+        </section>
+    </div>
+    
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+        getAudioContext().resume();
+        });
+
+        document.getElementsByTagName("summary")[0].addEventListener('click', function() {
+        if(document.getElementsByTagName("section")[0].style.width != "40%")
+            document.getElementsByTagName("section")[0].style.width = "40%";
+        else
+            document.getElementsByTagName("section")[0].style.width = "50px";
+        });
+
+    </script>
+</body>
+
+</html>
