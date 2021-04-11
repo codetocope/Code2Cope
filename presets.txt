@@ -1,57 +1,97 @@
 //// FACE - ROUND
 /**/
 fill(skintone);
-ellipse(0, 0, 400, 500 + s * 3);
+ellipse(0, 0, 400, 500 + s * 3000);
 
 fill(200, 0, 0, 100); // NOSE
 triangle(0,-40, -30, 40, 30, 40);
 
 fill(haircolor); // EYEBROWS
-ellipse(-80, -80 - s * 2, 110, 110);
-ellipse(80, -80 - s * 2, 110, 110);
+ellipse(-80, -80 - s * 2000, 110, 110);
+ellipse(80, -80 - s * 2000, 110, 110);
 fill(skintone);
-ellipse(-80, -70 - s * 2, 130, 110);
-ellipse(80, -70 - s * 2, 130, 110);
+ellipse(-80, -70 - s * 2000, 130, 110);
+ellipse(80, -70 - s * 2000, 130, 110);
 /**/
 //// FACE - NARROW
 /**/
 fill(skintone);
-ellipse(0, 0, 300, 500 + s * 3);
+ellipse(0, 0, 300, 500 + s * 3000);
 
 fill(200, 0, 0, 100); // NOSE
 triangle(0,-40, -30, 40, 30, 40);
 
 fill(haircolor); // EYEBROWS
-ellipse(-80, -80 - s * 2, 110, 110);
-ellipse(80, -80 - s * 2, 110, 110);
+ellipse(-80, -80 - s * 2000, 110, 110);
+ellipse(80, -80 - s * 2000, 110, 110);
 fill(skintone);
-ellipse(-80, -70 - s * 2, 130, 110);
-ellipse(80, -70 - s * 2, 130, 110);
+ellipse(-80, -70 - s * 2000, 130, 110);
+ellipse(80, -70 - s * 2000, 130, 110);
 /**/
 //// FACE - SQUARE
 /**/
 fill(skintone);
-rect(0, 0, 400, 420 + s * 3, 20);
+rect(0, 0, 400, 420 + s * 3000, 20);
 
 fill(200, 0, 0, 100); // NOSE
 triangle(0,-40, -30, 40, 30, 40);
   
 fill(haircolor); // EYEBROWS
-ellipse(-80, -80 - s * 2, 110, 110);
-ellipse(80, -80 - s * 2, 110, 110);
+ellipse(-80, -80 - s * 2000, 110, 110);
+ellipse(80, -80 - s * 2000, 110, 110);
 fill(skintone);
-ellipse(-80, -70 - s * 2, 130, 110);
-ellipse(80, -70 - s * 2, 130, 110);
+ellipse(-80, -70 - s * 2000, 130, 110);
+ellipse(80, -70 - s * 2000, 130, 110);
 /**/
 //// MOUTH - HAPPY
 /**/
 fill(0);
-arc(0, 80, 200, 150 + s * 10, 0, PI, CHORD);
+stroke(0);
+strokeWeight(3);
+
+beginShape();
+
+curveVertex(-100, 100);
+curveVertex(-100, 100);
+curveVertex(-50, 125);
+curveVertex(50, 125);
+curveVertex(100, 100);
+curveVertex(100, 100);
+
+curveVertex(100 + s * 50, 100);
+curveVertex(50, 135 + s * 2000);
+curveVertex(-50, 135 + s * 2000);
+curveVertex(-100, 100);
+curveVertex(-100, 100);
+
+endShape();
+
+noStroke();
 /**/
 //// MOUTH - SAD
 /**/
 fill(0);
-arc(0, 120, 200 + s * 10, 150 , PI, 0, CHORD);
+stroke(0);
+strokeWeight(3);
+
+beginShape();
+
+curveVertex(-100, 145);
+curveVertex(-100, 145);
+curveVertex(-50, 95);
+curveVertex(50, 95);
+curveVertex(100, 145);
+curveVertex(100, 145);
+
+curveVertex(100, 145);
+curveVertex(50, 105 + s * 2000);
+curveVertex(-50, 105 + s * 2000);
+curveVertex(-100, 145);
+curveVertex(-100, 145);
+
+endShape();
+
+noStroke();
 /**/
 //// EYES - BIG
 /**/
@@ -294,8 +334,8 @@ ellipse(pose.leftWrist.x - 40, pose.leftWrist.y - 20, 70, 40);
 drawKeypointsExcluded(pose, ['leftEye', 'rightEye', 'nose', 'leftWrist', 'rightWrist']);
 // BERET
 fill(0);
-ellipse(pose.nose.x, pose.nose.y - 90, 170, 60);
-rect(pose.nose.x + 5, pose.nose.y - 130, 10, 30);
+ellipse(pose.nose.x, pose.nose.y - 150, 170, 60);
+rect(pose.nose.x + 5, pose.nose.y - 190, 10, 30);
 
 // MUSTACHE
 triangle(pose.nose.x, pose.nose.y + 20, pose.nose.x - 30, pose.nose.y + 30, pose.nose.x, pose.nose.y + 10); // RIGHT

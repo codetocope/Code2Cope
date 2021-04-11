@@ -30,7 +30,7 @@ html {
 }
 
 #nav a {
-    width: 10%;
+    width: 12%;
 
     text-align: center;
     text-decoration: none;
@@ -73,6 +73,10 @@ iframe {
     width: 70%;
 }
 
+iframe p {
+    font-weight: normal;
+}
+
 label {
     font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
 }
@@ -84,6 +88,11 @@ details {
 section {
     min-height: 100%;
     width: 50px;
+}
+
+section img {
+    width: 40%;
+    height: auto;
 }
 
 details.accordion {
@@ -133,11 +142,3 @@ details iframe {
     width: 100px;
     max-width: 80%;
 }
-
-/*
-.dropdown-container button,
-select {
-    min-width: 9%;
-    white-space: nowrap;
-}
-*/

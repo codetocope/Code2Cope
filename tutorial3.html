@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: lightgray;
+        }
+
+        html {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            margin: 0px 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        section p {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+        }
+
+        section img {
+            width: 90%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section h1 {
+            margin-top: 40px;
+        }
+
+        select {
+            width: 100%;
+            height: 25px;
+            right: 0;
+            top: 0;
+            margin: 5px 0px;
+            position: fixed;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="contents" onchange="goTo();">
+        <option>Intro</option>
+        <option>Basics</option>
+        <option>Building a Circuit</option>
+    </select>
+    <section id="Intro">
+        <h1>Intro</h1>
+        <p>The physical part of computing relies on the concept of a circuit. Circuits allow for electricity to flow
+            between components, driving hardware and environment interactions. This section will explain some of the
+            vocabulary used in this area, as well as guide you through building your first circuit.</p>
+    </section>
+    <section id="Basics">
+        <h1>Basics</h1>
+        <p>A <strong>circuit </strong>is the basic concept behind all electronic processes. It is composed of electronic
+            components through which electricity can flow. We'll see a very simple one in the next section (Building a
+            Circuit).</p>
+        <p>In order to recreate this using our materials, let&rsquo;s learn some basic terminology:</p>
+        <p><strong>Closed circuit </strong>- a loop that is fully connected. All circuits have a voltage source (e.g. a
+            battery), a conductive path (e.g. copper tape or wires), and a load that uses power (e.g. the LED).</p>
+        <p><strong>Open circuit</strong> - a loop that is disconnected at some point (making it not really a circuit at
+            all). If your circuit doesn&rsquo;t work, it is most likely an open circuit.&nbsp;</p>
+        <p><strong>Light Emitting Diode (LED)</strong> - a tiny device that emits light when electricity flows through
+            it. In a standard LED, the electricity flows from the positive (longer leg) to the negative (shorter leg).
+            Other LEDs will have one side that is labeled with a &ldquo;+&rdquo; for its positive side, and a
+            &ldquo;-&rdquo; for its negative.</p>
+        <p><strong>Resistance - </strong>depending on the voltage of your battery, you may need resistance before
+            connecting it to your LED. Resistance is used to curb the flow of the current. Resistance is measured in
+            Ohms.&nbsp;</p>
+        <p><strong>Voltage</strong> - the power of a current. The batteries we&rsquo;ll be using are 3V (read: 3 volts).
+        </p>
+    </section>
+    <section id="Building a Circuit">
+        <h1>Building a Circuit</h1>
+        <p>Our most basic circuit will look something like this:</p>
+        <img src="img/circuitExample.jpg" />
+        <p>1. Connect the positive side of your LED to the positive side of your battery - the top of the battery is
+            positive, and the bottom side is negative. The LED&rsquo;s positive side is labeled with a &ldquo;+&rdquo;
+            sign (or the &ldquo;long&rdquo; leg, if using a standard LED).</p>
+        <img src="img/circuit1.jpg" />
+        <p>2. Connect the negative side of the LED to the negative (bottom) side of the battery - you can do this by
+            placing tape underneath the battery. Your LED should light up as soon as it is securely connected.</p>
+        <img src="img/circuit2.jpg" />
+        <p>This is a very basic example, which means there&rsquo;s a lot of room for creativity! Try to create different
+            shapes with your copper tape, or you can connect multiple circuits into one. When connecting multiple circuits, you will need multiple power sources.</p>
+    </section>
+</body>
+
+<script>
+    function goTo() {
+        var index = document.getElementById("contents").selectedIndex;
+        var body = document.getElementsByTagName("section");
+        var id = body[index].id;
+
+        window.location.hash = id;
+    }
+</script>
+
+</html>
