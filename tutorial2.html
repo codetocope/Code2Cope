@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: lightgray;
+        }
+
+        html {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            margin: 0px 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        section h1 {
+            margin-top: 40px;
+        }
+
+        section p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        select {
+            width: 100%;
+            height: 25px;
+            right: 0;
+            top: 0;
+            margin: 5px 0px;
+            position: fixed;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="contents" onchange="goTo();">
+        <option>Intro</option>
+        <option>Functions</option>
+        <option>Frequencies and Synthesis</option>
+    </select>
+    <section id="Intro">
+        <h1>Intro</h1>
+        <p>p5.js also has a sound library called p5.sound that makes it easy to create and interact with audio in your
+            browser. In this section we’ll look at some of the tools that p5.sound provides, as well as some of the math
+            behind it all.</p>
+    </section>
+    <section id="Functions">
+        <h1>Functions</h1>
+        <p>This is a basic list of some of the things that p5.sound has to offer. For a more comprehensive list of
+            p5.sound functions, <a href="https://p5js.org/reference/#/libraries/p5.sound" target="_blank"
+                rel="noopener">click here</a>.&nbsp;</p>
+        <p><strong>p5.Oscillator() </strong>- creates an Oscillator object, provided with a frequency and a type. We
+            will learn more about frequencies and waveforms in the next section.</p>
+        <p><strong>p5.SoundRecorder()</strong> - creates a Sound Recorder that allows you to record and playback your
+            own sounds.</p>
+        <p><strong>p5.Delay()</strong> - adds delay to a sound, making it start later</p>
+        <p><strong>filter()</strong> - filters out frequencies from a specific cutoff point</p>
+    </section>
+    <section id="Frequencies and Synthesis">
+        <h1>Frequencies and Synthesis</h1>
+        <p><strong>Sound synthesis </strong>is the process of creating and combining sounds using digital components.
+            One method is by combining waves of different frequencies.</p>
+        <p><strong>Frequency </strong>- the number of times a wave repeats in a single time unit. Higher frequencies are
+            higher in pitch, while lower frequencies are lower in pitch. For example, an &ldquo;A&rdquo; note is usually
+            represented as 440Hz (read: &ldquo;440 Hertz&rdquo;). You will notice that if you play a piano
+            &ldquo;A&rdquo; note alongside the frequency of 440Hz, it doesn&rsquo;t sound exactly the same. That&rsquo;s
+            because piano notes are actually extremely complicated, and mix other frequencies in the form of
+            <strong>overtones</strong>.</p>
+        <p><strong>Waveform </strong>- the shape of the wave. There are many different waveforms, like <strong>sine
+            </strong>waves, <strong>sawtooth </strong>waves, <strong>triangle </strong>waves, and <strong>square
+            </strong>waves. The shape of the wave also affects the kind of sound it makes. The most common of these is
+            the sine wave.</p>
+    </section>
+</body>
+
+<script>
+    function goTo() {
+        var index = document.getElementById("contents").selectedIndex;
+        var body = document.getElementsByTagName("section");
+        var id = body[index].id;
+
+        window.location.hash = id;
+    }
+</script>
+
+</html>

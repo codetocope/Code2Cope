@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: lightgray;
+        }
+
+        html {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            margin: 0px 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        section h1 {
+            margin-top: 40px;
+        }
+
+        section p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        select {
+            width: 100%;
+            height: 25px;
+            right: 0;
+            top: 0;
+            margin: 5px 0px;
+            position: fixed;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="contents" onchange="goTo();">
+        <option>Intro</option>
+        <option>Basics</option>
+        <option>Variables</option>
+        <option>Functions</option>
+        <option>Special Structures</option>
+    </select>
+    <section id="Intro">
+        <h1>Intro</h1>
+        <p>Code to Cope is an online platform aimed at encouraging mental wellbeing through STEM education. Here you’ll
+            be introduced to a variety of techniques that are used heavily in the computing sciences, like data
+            structures, sound synthesis, and hardware.</p>
+    </section>
+    <section id="Basics">
+        <h1>Basics</h1>
+        <p>p5.js is a library built on JavaScript, a programming language that drives almost all interactivity on the
+            web. This section will walk you through some basic features found specifically within p5.js, but have
+            applications in all programming languages.</p>
+        <p><strong>Setup</strong></p>
+        <p>Every p5.js script starts execution with a setup() function, and the draw() function redraws the canvas every
+            frame to update the image. With these two functions, you can do almost anything within p5.js.</p>
+    </section>
+    <section id="Variables">
+        <h1>Variables</h1>
+        <p>Variables are defined using either let or var (though it is best practice to stick with one when writing your
+            sketch). For example:</p>
+        <p>let name = &lsquo;Bob&rsquo;;</p>
+        <p>let animal = &lsquo;lizard&rsquo;;</p>
+        <p>let sentence = name + &lsquo; has a pet &lsquo; + animal;</p>
+        <p>There are a few data types to be aware of:</p>
+        <p><strong>Boolean</strong> - true or false values</p>
+        <p><strong>String</strong> - characters or words</p>
+        <p><strong>Number</strong> - a whole or decimal number</p>
+        <p><strong>Objects</strong> - collections of related data (called properties)</p>
+        <p>JavaScript (and thus p5.js) is a dynamically typed language, which means that the boundaries between data
+            types are fluid. Numbers may be used as booleans, which may also be used as strings and vice versa, etc. For
+            example, &ldquo;help&rdquo; + 5 would give us &ldquo;help5,&rdquo; as the &ldquo;5&rdquo; gets turned into a
+            string.</p>
+        <p>Some special notation to be aware of:</p>
+        <p>A number variable followed by ++ (i.e. x++) means that this variable is to be incremented by one. It is
+            simply shorthand for saying x = x + 1. This also applies to using something like x--, which means to
+            decrement by 1.</p>
+    </section>
+    <section id="Functions">
+        <h1>Functions</h1>
+        <p>p5.js provides some special functions that make drawing easier, such as:</p>
+        <p>ellipse(x, y, width, height) for drawing ellipses and circles</p>
+        <p>rect(x, y, width, height) for drawing rectangles and squares</p>
+        <p>fill(red, green, blue) for filling a shape with a specified color</p>
+        <p>line(x1, y1, x2, y2) for drawing a line between two points</p>
+        <p>random(maximum) for generating a random number up to the given maximum</p>
+        <p>&hellip; and many more!</p>
+        <p>You can also define your own function as follows:</p>
+        <p>function functionName (parameters) {</p>
+        <p>&hellip; // body of your function</p>
+        <p>}</p>
+        <p>Functions are useful for defining chunks of code that will be used or repeated many times in your program.
+            Another useful keyword to know is <strong>return</strong>. When returning from a function, you can provide a
+            value that can be used outside of the function itself. For example:</p>
+        <p>function add5 (number) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;return number + 5;</p>
+        <p>}</p>
+        <p>var newValue = add5(10); // this will return 15, setting newValue to 15</p>
+    </section>
+    <section id="Special Structures">
+        <h1>Special Structures</h1>
+        <p>One important structure is the<strong> if-else </strong>statement, illustrated below:</p>
+        <p>if (score &gt; 50)&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;isPassingGrade = true;</p>
+        <p>else {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;isPassingGrade = false;</p>
+        <p>}</p>
+        <p>This can be read as: if score &gt; 50, then &ldquo;isPassingGrade&rdquo; equals true, else
+            &ldquo;isPassingGrade&rdquo; equals false. The if-else statement is called a conditional, because it relies
+            on given conditions to determine the next step. These statements can take on many forms, and offer an
+            in-between step called &ldquo;else if&rdquo; as well. You can use as many &ldquo;if&rsquo;s&rdquo; as you
+            want, followed by as many &ldquo;else-if&rsquo;s&rdquo;, but only a single &ldquo;else.&rdquo;</p>
+        <p><strong>Loops </strong>are another very important concept in programming. The idea of a loop is to do a set
+            of instructions repeatedly.</p>
+        <p>There are two main types of loops:</p>
+        <p>A <strong>while </strong>loop:</p>
+        <p>while(light = &ldquo;green&rdquo;) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;canGo = true;</p>
+        <p>}</p>
+        <p>And a <strong>for </strong>loop:</p>
+        <p>for(var index = 0; index &lt; numberOfLoops; index++) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;doSomeTask();</p>
+        <p>}</p>
+        <p>The for loop also has another variant called the <strong>for-in </strong>loop:</p>
+        <p>for(var number in numArray) {</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;sum = sum + number;</p>
+        <p>}</p>
+        <p>The for loop requires three things: a starting condition, an ending condition, and a step.</p>
+        <p>Important note on looping: beware of infinite loops! An infinite loop is one that will continue endlessly,
+            and has no escape parameter. Not all infinite loops are bad under specific cases. All video games also run
+            on a special loop, and even your p5.js sketch is running on an infinite loop to draw every frame. Though
+            this is the case, they are generally avoided as they can easily crash a program. Make sure that your loops
+            will eventually end by carefully checking their conditions before you run them!</p>
+    </section>
+</body>
+
+<script>
+    function goTo() {
+        var index = document.getElementById("contents").selectedIndex;
+        var body = document.getElementsByTagName("section");
+        var id = body[index].id;
+
+        window.location.hash = id;
+    }
+</script>
+
+</html>
